@@ -7,26 +7,26 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const testimonials = [
   {
-    quote: "Coralum's chatbot delivered 30% more qualified demos in the first month. The knowledge transfer was seamless—my team now owns the entire system.",
-    name: "Sarah Kim",
-    title: "CEO",
-    company: "NextWave",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612c8fd?w=150&h=150&fit=crop&crop=face"
+    quote: "Coralum jumped in and quickly built the AI features we’d been stuck on for weeks. We went from concept to working prototype in under a month, which let us demo to investors ahead of schedule.",
+    name: "Fabian Conejo",
+    title: "SaaS Entrepreneur",
+    company: "Alterpay",
+    // image: "https://images.unsplash.com/photo-1494790108755-2616b612c8fd?w=150&h=150&fit=crop&crop=face"
   },
-  {
-    quote: "Their RAG implementation saved us 15 hours per week in support queries. More importantly, they taught us how to maintain and scale it ourselves.",
-    name: "Marcus Chen",
-    title: "VP of Operations",
-    company: "FlowTech",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-  },
-  {
-    quote: "From prototype to production in 3 weeks. The document parsing system processes 500+ contracts monthly, extracting key terms automatically.",
-    name: "Lisa Rodriguez",
-    title: "CTO",
-    company: "LegalCore",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-  }
+  // {
+  //   quote: "Their RAG implementation saved us 15 hours per week in support queries. More importantly, they taught us how to maintain and scale it ourselves.",
+  //   name: "Marcus Chen",
+  //   title: "VP of Operations",
+  //   company: "FlowTech",
+  //   image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+  // },
+  // {
+  //   quote: "From prototype to production in 3 weeks. The document parsing system processes 500+ contracts monthly, extracting key terms automatically.",
+  //   name: "Lisa Rodriguez",
+  //   title: "CTO",
+  //   company: "LegalCore",
+  //   image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+  // }
 ];
 
 export default function TestimonialsSection({ isVisible }) {
@@ -85,11 +85,6 @@ export default function TestimonialsSection({ isVisible }) {
                 </blockquote>
 
                 <div className="flex items-center justify-center space-x-4">
-                  <img
-                    src={testimonials[currentIndex].image}
-                    alt={testimonials[currentIndex].name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-[#fd8246]/20"
-                  />
                   <div className="text-left">
                     <p className="text-xl font-bold text-[#155e63]">
                       {testimonials[currentIndex].name}

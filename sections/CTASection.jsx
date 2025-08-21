@@ -38,22 +38,15 @@ export default function CtaSection({ isVisible }) {
             <Button 
               size="lg"
               className="bg-[#fe5620] hover:bg-[#e5491c] text-white px-6 sm:px-8 lg:px-10 py-4 sm:py-6 text-base sm:text-lg lg:text-xl font-semibold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+              onClick={() => {
+                window.open('https://calendar.app.google/PzAQecVTNGDXEorz5', '_blank');
+              }}
             >
               <Calendar className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
-              <span className="hidden sm:inline">Schedule Your Free 40min Strategy Call</span>
-              <span className="sm:hidden">Book Free Strategy Call</span>
+              <span className="inline">Book a call</span>
               <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3" />
             </Button>
           </motion.div>
-
-          <motion.p 
-            className="text-white/70 mt-8 text-lg"
-            initial={{ opacity: 0 }}
-            animate={isVisible.cta ? { opacity: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            No pitch deck. No generic solutions. Just strategic clarity for your specific SaaS challenges.
-          </motion.p>
         </motion.div>
       </div>
     </section>

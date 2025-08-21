@@ -1,25 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Calendar, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function HeroSection() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    timePreference: ''
-  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-  };
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden w-full pt-16 sm:pt-0">
@@ -79,22 +66,6 @@ export default function HeroSection() {
           >
             Turn fragmented tools into thriving ecosystems. We build, optimize, and transfer AI-powered solutions that grow stronger together.
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-          >
-            <Button 
-              size="lg"
-              className="bg-[#fe5620] hover:bg-[#e5491c] text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
-            >
-              <Calendar className="w-5 h-5 mr-3" />
-              <span className="hidden sm:inline">Book Your Free 40min Strategy Call</span>
-              <span className="sm:hidden">Book Free Strategy Call</span>
-              <ArrowRight className="w-5 h-5 ml-3" />
-            </Button>
-          </motion.div>
         </motion.div>
 
         {/* Right Content - Contact Form */}
@@ -104,80 +75,31 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="mb-6">
-            <h3 className="text-2xl font-bold text-[#155e63] mb-2">Start Your AI Journey</h3>
-            <p className="text-gray-600">Get a personalized strategy in 40 minutes</p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <Label htmlFor="name" className="text-[#155e63] font-medium">Full Name</Label>
-              <Input
-                id="name"
-                type="text"
-                placeholder="Your name"
-                value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
-                className="mt-2 border-gray-200 focus:border-[#fe5620] focus:ring-[#fe5620]/20 rounded-xl"
-                required
-              />
-            </div>
-
-            <div>
-              <Label htmlFor="email" className="text-[#155e63] font-medium">Work Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="founder@company.com"
-                value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="mt-2 border-gray-200 focus:border-[#fe5620] focus:ring-[#fe5620]/20 rounded-xl"
-                required
-              />
-            </div>
-
-            <div>
-              <Label htmlFor="company" className="text-[#155e63] font-medium">Company</Label>
-              <Input
-                id="company"
-                type="text"
-                placeholder="Your SaaS company"
-                value={formData.company}
-                onChange={(e) => setFormData({...formData, company: e.target.value})}
-                className="mt-2 border-gray-200 focus:border-[#fe5620] focus:ring-[#fe5620]/20 rounded-xl"
-                required
-              />
-            </div>
-
-            <div>
-              <Label htmlFor="time" className="text-[#155e63] font-medium">Best Time to Call</Label>
-              <select
-                id="time"
-                value={formData.timePreference}
-                onChange={(e) => setFormData({...formData, timePreference: e.target.value})}
-                className="mt-2 w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-[#fe5620] focus:ring-[#fe5620]/20 focus:outline-none"
-                required
-              >
-                <option value="">Select preferred time</option>
-                <option value="morning">Morning (9AM - 12PM EST)</option>
-                <option value="afternoon">Afternoon (1PM - 5PM EST)</option>
-                <option value="evening">Evening (6PM - 8PM EST)</option>
-              </select>
-            </div>
-
-            <Button 
-              type="submit"
-              className="w-full bg-[#155e63] hover:bg-[#0f4a4f] text-white py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
+          <div>
+            <h3 className="text-2xl font-bold text-[#155e63] mb-2">Supercharge Your AI Journey</h3>
+            <p className="text-gray-600">Get a personalized consultation with our founder and structure a roadmap to get the most out of your investments.</p>
+            <a href="https://www.linkedin.com/in/eduardo-sancho-solano/" target="_blank" rel="noopener noreferrer">
+              <small className="text-sm text-gray-500 underline mb-5">Meet our founder</small>
+            </a>
+            <br />
+            <br />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
             >
-              Schedule Strategy Call
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </form>
-
-          <div className="mt-6 pt-6 border-t border-gray-100">
-            <p className="text-sm text-gray-500 text-center">
-              No sales pitch. Just strategic insights tailored to your SaaS.
-            </p>
+              <Button 
+                size="lg"
+                className="bg-[#fe5620] hover:bg-[#e5491c] text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                onClick={() => {
+                  window.open('https://calendar.app.google/PzAQecVTNGDXEorz5', '_blank');
+                }}
+              >
+                <Calendar className="w-5 h-5 mr-3" />
+                <span className="inline">Book a call</span>
+                <ArrowRight className="w-5 h-5 ml-3" />
+              </Button>
+            </motion.div>
           </div>
         </motion.div>
       </div>

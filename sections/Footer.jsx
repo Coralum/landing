@@ -56,7 +56,9 @@ export default function Footer() {
               Ready to explore how AI can transform your SaaS?
             </p>
             <a 
-              href="#hero"
+              href="https://calendar.app.google/PzAQecVTNGDXEorz5"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center text-[#fd8246] hover:text-[#fe5620] font-semibold transition-colors duration-300"
             >
               Schedule Strategy Call
@@ -68,7 +70,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-sm">
-            © 2024 Coralum. All rights reserved. Software as a Reef™
+            © 2025 Coralum. All rights reserved. Software as a Reef™
           </p>
           
           {/* Social Links */}
