@@ -1,21 +1,34 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Layers, Zap, Target, Users } from 'lucide-react';
+import { ArrowRight, Target, Zap, Layers, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const phases = [
-  { label: "Discovery", icon: Target },
-  { label: "Prototype", icon: Zap },
-  { label: "Integrate", icon: Layers },
-  { label: "Optimize", icon: Users }
-];
-
-const principles = [
-  { label: "Build", description: "Custom AI solutions" },
-  { label: "Own", description: "Your data & IP" },
-  { label: "Operate", description: "Seamless integration" },
-  { label: "Transfer", description: "In-house expertise" }
+const bootJourney = [
+  { 
+    phase: "Build", 
+    icon: Target, 
+    description: "Custom AI solutions",
+    detail: "We discover your needs and prototype tailored solutions"
+  },
+  { 
+    phase: "Own", 
+    icon: Zap, 
+    description: "Your data & IP",
+    detail: "Everything we create becomes your proprietary technology"
+  },
+  { 
+    phase: "Operate", 
+    icon: Layers, 
+    description: "Seamless integration",
+    detail: "We walk you through integration and optimize until it runs smoothly"
+  },
+  { 
+    phase: "Transfer", 
+    icon: Users, 
+    description: "In-house expertise",
+    detail: "We train your team and hand over complete ownership"
+  }
 ];
 
 export default function ApproachSection({ isVisible }) {
@@ -25,19 +38,6 @@ export default function ApproachSection({ isVisible }) {
       data-animate
       className="py-24 bg-gradient-to-b from-[#f9f8eb] to-white relative overflow-hidden"
     >
-      {/* Decorative Elements */}
-      <motion.div 
-        className="absolute top-10 right-10 w-64 h-64 bg-[#fe5620]/5 rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.5, 0.3]
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div 
@@ -47,76 +47,61 @@ export default function ApproachSection({ isVisible }) {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-[#155e63] mb-6">
-            Your AI, Structured as an Ecosystem
+            Business simplicity without AI complexity
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Like a coral reef, your SaaS needs small, connected parts that grow stronger together. 
-            We blend systems thinking with hands-on AI expertise to turn fragmented ideas into 
-            self-sustaining, revenue-driving solutions.
+            Transform your scattered AI tools into a self-sustaining ecosystem. Each component we build makes the others stronger, creating a system that grows more valuable over time.
           </p>
         </motion.div>
 
-        {/* Process Flow */}
+        {/* The BOOT Journey - Fused Process Flow & Business Model */}
         <motion.div 
           className="mb-20"
           initial={{ opacity: 0, y: 40 }}
           animate={isVisible.approach ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-8">
-            {phases.map((phase, index) => (
-              <React.Fragment key={phase.label}>
-                <div className="flex flex-col items-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-[#155e63] to-[#1a6b70] rounded-2xl flex items-center justify-center mb-3 shadow-lg">
-                    <phase.icon className="w-10 h-10 text-white" />
-                  </div>
-                  <span className="text-[#155e63] font-semibold text-lg">
-                    {phase.label}
-                  </span>
-                </div>
-                {index < phases.length - 1 && (
-                  <ArrowRight className="w-6 h-6 text-[#fd8246] hidden lg:block" />
-                )}
-              </React.Fragment>
-            ))}
+          {/* Business Collaboration Image */}
+          <div className="text-center mb-12">
+            <div className="w-full max-w-4xl mx-auto rounded-2xl shadow-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
+              <img 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Business team collaborating on digital transformation"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
-        </motion.div>
 
-        {/* Business Model Principles */}
-        <motion.div
-          className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100"
-          initial={{ opacity: 0, y: 40 }}
-          animate={isVisible.approach ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-[#155e63] mb-4">
-              Our Partnership Model
+              The BOOT Journey
             </h3>
             <p className="text-gray-600 text-lg">
-              We don't just deliver solutions. We transfer ownership and knowledge.
+              Our complete partnership model supports you all the way from discovery to ownership transfer.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
-            {principles.map((principle, index) => (
-              <motion.div
-                key={principle.label}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible.approach ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 + (index * 0.1) }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-[#fe5620] to-[#fd8246] rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                  {principle.label[0]}
+          <div className="flex flex-wrap justify-center items-start gap-4 lg:gap-8">
+            {bootJourney.map((phase, index) => (
+              <React.Fragment key={phase.phase}>
+                <div className="flex flex-col items-center">
+                  <div className="w-24 h-24 bg-gradient-to-r from-[#155e63] to-[#1a6b70] rounded-2xl flex items-center justify-center mb-4 shadow-lg relative">
+                    <phase.icon className="w-12 h-12 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-[#155e63] mb-2">
+                    {phase.phase}
+                  </h4>
+                  <p className="text-sm text-gray-600 font-medium mb-2 max-w-32 text-center">
+                    {phase.description}
+                  </p>
+                  <p className="text-xs text-gray-500 max-w-40 text-center leading-relaxed">
+                    {phase.detail}
+                  </p>
                 </div>
-                <h4 className="text-xl font-bold text-[#155e63] mb-2">
-                  {principle.label}
-                </h4>
-                <p className="text-gray-600">
-                  {principle.description}
-                </p>
-              </motion.div>
+                {index < bootJourney.length - 1 && (
+                  <ArrowRight className="w-6 h-6 text-[#fd8246] hidden lg:block self-center" />
+                )}
+              </React.Fragment>
             ))}
           </div>
         </motion.div>

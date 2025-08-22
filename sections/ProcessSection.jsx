@@ -44,35 +44,6 @@ export default function ProcessSection({ isVisible }) {
       data-animate
       className="py-24 bg-[#155e63] relative overflow-hidden"
     >
-      {/* Decorative Elements */}
-      <motion.div 
-        className="absolute top-0 left-0 w-96 h-96 bg-[#fe5620]/10 rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.2, 1],
-          x: [0, 50, 0],
-          y: [0, 30, 0]
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      
-      <motion.div 
-        className="absolute bottom-0 right-0 w-80 h-80 bg-[#fd8246]/10 rounded-full blur-3xl"
-        animate={{
-          scale: [1.2, 1, 1.2],
-          x: [0, -30, 0],
-          y: [0, -40, 0]
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2
-        }}
-      />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <motion.div 

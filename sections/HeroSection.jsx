@@ -9,7 +9,7 @@ export default function HeroSection() {
 
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden w-full pt-16 sm:pt-0">
+    <section className="relative min-h-screen flex items-center overflow-hidden w-full pt-16 sm:pt-8" id="hero">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -26,7 +26,7 @@ export default function HeroSection() {
 
 
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-4 md:gap-4 lg:gap-12 items-center w-full">
         {/* Left Content */}
         <motion.div 
           className="text-white"
@@ -38,7 +38,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-6"
+            className="mb-4"
           >
             <span className="inline-block px-4 py-2 bg-[#fe5620]/20 backdrop-blur-sm rounded-full text-[#fd8246] font-medium text-sm border border-[#fe5620]/30">
               Software as a Reef
@@ -46,20 +46,20 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.h1 
-            className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-8 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Craft Adaptive
+            We Craft Adaptive
             <span className="block text-[#fd8246]">AI Workflows</span>
-            <span className="block text-3xl sm:text-4xl lg:text-5xl font-normal opacity-90">
-              That Thrive With Your SaaS
+            <span className="block text-xl sm:text-2xl lg:text-3xl font-normal opacity-90">
+              Tailored To Your SaaS
             </span>
           </motion.h1>
 
           <motion.p 
-            className="text-lg sm:text-xl lg:text-2xl mb-12 opacity-90 leading-relaxed max-w-2xl"
+            className="text-lg sm:text-xl lg:text-2xl mb-6 opacity-90 leading-relaxed max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
@@ -70,19 +70,30 @@ export default function HeroSection() {
 
         {/* Right Content - Contact Form */}
         <motion.div 
-          className="bg-white/95 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/20 w-full"
+          className="bg-white/95 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/20 w-full max-w-sm md:max-w-none lg:max-w-none mx-auto lg:mx-0"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div>
-            <h3 className="text-2xl font-bold text-[#155e63] mb-2">Supercharge Your AI Journey</h3>
-            <p className="text-gray-600">Get a personalized consultation with our founder and structure a roadmap to get the most out of your investments.</p>
-            <a href="https://www.linkedin.com/in/eduardo-sancho-solano/" target="_blank" rel="noopener noreferrer">
-              <small className="text-sm text-gray-500 underline mb-5">Meet our founder</small>
-            </a>
-            <br />
-            <br />
+            <h3 className="text-xl sm:text-2xl font-bold text-[#155e63] mb-2">Supercharge Your AI Journey</h3>
+            <p className="text-sm sm:text-base text-gray-600">Get a personalized consultation with our founder and structure a roadmap to get the most out of your investments.</p>
+            <div className="my-3">
+              <a href="https://www.linkedin.com/in/eduardo-sancho-solano/" target="_blank" rel="noopener noreferrer">
+                <small className="text-sm text-gray-500 underline">Meet our founder</small>
+              </a>
+            </div>
+            <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg mb-4">
+               <iframe 
+                 className="w-full h-full"
+                 src="https://www.youtube.com/embed/tPBNNkIsApE?si=lBlMoJv7wWwUnnTq" 
+                 title="YouTube video player" 
+                 frameBorder="0" 
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                 referrerPolicy="strict-origin-when-cross-origin" 
+                 allowFullScreen
+               />
+             </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

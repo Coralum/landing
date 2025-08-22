@@ -25,10 +25,15 @@ export default function CtaSection({ isVisible }) {
             <span className="block text-[#fd8246]">AI Strategy?</span>
           </h2>
           
-          <p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Stop building AI features that gather dust. Start building ecosystems that grow stronger, 
-            drive revenue, and scale with your vision.
-          </p>
+          <div className="space-y-6 mb-12">
+            <p className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed text-left">
+              Your team already uses AI tools everyday. And it has helped you grow and be more productive, but now it feels scattered... convoluted...
+            </p>
+            
+            <p className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed text-left">
+              This is exactly when AI becomes most powerful. So let's start by structuring a roadmap to get the most out of your investments.
+            </p>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -56,9 +56,6 @@ export default function TestimonialsSection({ isVisible }) {
           <h2 className="text-4xl lg:text-5xl font-bold text-[#155e63] mb-6">
             Trusted by Founders & CTOs
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how strategic AI partnerships transform SaaS operations and drive measurable growth.
-          </p>
         </motion.div>
 
         <motion.div 

@@ -12,19 +12,19 @@ const services = [
     icon: MessageSquare,
     title: "AI Sales Chatbot",
     painPoint: "Leads lost to slow follow-up",
-    outcome: "24/7 qualification & hand-offs, +20% conversion",
+    outcome: "24/7 qualification with seamless CRM hand-offs to free up your team's time for high-value conversations",
     features: [
       "Lead qualification automation",
       "CRM integration & handoffs",
-      "Multi-channel deployment"
+      "Automated FAQ handling"
     ],
     gradient: "from-[#fe5620] to-[#fd8246]"
   },
   {
     icon: Search,
     title: "RAG Knowledge Hub",
-    painPoint: "Docs no one can trust",
-    outcome: "Instant, cite-backed answers in your UI or Slack",
+    painPoint: "A jungle of internal docs",
+    outcome: "Instant, accurate answers from your knowledge base—cited, verified, and integrated into your existing tools",
     features: [
       "Document ingestion pipeline",
       "Contextual search & retrieval",
@@ -36,7 +36,7 @@ const services = [
     icon: FileText,
     title: "Doc Parsing & Summaries",
     painPoint: "Hours lost reading contracts",
-    outcome: "Auto-extracted clauses & bullet summaries in your CRM",
+    outcome: "Extract key insights from contracts, meeting notes, and documents in seconds, not hours",
     features: [
       "Contract clause extraction",
       "Automated summarization",
