@@ -13,8 +13,12 @@ import Footer from '@/sections/Footer';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState({});
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
+    // Force hydration for static export
+    setIsHydrated(true);
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -34,6 +38,17 @@ export default function Home() {
 
     return () => observer.disconnect();
   }, []);
+
+  // Don't render until hydrated to prevent hydration mismatch
+  if (!isHydrated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-[#f9f8eb] to-white">
+        <div className="flex items-center justify-center h-screen">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#fe5620]"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#f9f8eb] to-white">
