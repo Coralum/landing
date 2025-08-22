@@ -24,8 +24,6 @@
     --primary-foreground: 210 40% 98%;
     --secondary: 210 40% 96%;
     --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 210 40% 96%;
     --accent-foreground: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
@@ -67,24 +65,30 @@
     @apply bg-background text-foreground;
   }
   
-  /* Ensure content is visible in static export */
-  [style*="opacity:0"] {
-    opacity: 1 !important;
-    transform: none !important;
+  /* Progressive enhancement: Allow scroll animations to work first */
+  @media (prefers-reduced-motion: no-preference) {
+    /* Give Framer Motion more time to handle scroll animations */
+    @keyframes force-visible {
+      to {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+    
+    /* Apply fallback only after 5 seconds to allow scroll animations */
+    [style*="opacity:0"] {
+      animation: force-visible 0.1s ease-out 5s forwards;
+    }
   }
   
-  /* Fallback for Framer Motion transforms */
-  [style*="translateX(-50px)"],
-  [style*="translateX(50px)"],
-  [style*="translateY(20px)"],
-  [style*="translateY(30px)"],
-  [style*="translateY(40px)"],
-  [style*="translateY(50px)"] {
-    transform: none !important;
-  }
-  
-  /* Ensure all sections are visible */
+  /* Immediate fallback for critical content */
   section {
+    /* Ensure sections are at least partially visible */
+    min-height: 1px;
+  }
+  
+  /* Fallback for any remaining invisible states after JavaScript loads */
+  .js-fallback {
     opacity: 1 !important;
     transform: none !important;
   }
