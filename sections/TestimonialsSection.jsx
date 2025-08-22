@@ -110,7 +110,7 @@ export default function TestimonialsSection({ isVisible }) {
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-3 h-3 rounded-full ${
                       index === currentIndex 
                         ? 'bg-[#fe5620] scale-125' 
                         : 'bg-gray-300 hover:bg-gray-400'

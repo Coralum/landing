@@ -64,7 +64,7 @@ export default function ProcessSection({ isVisible }) {
           {steps.map((step, index) => (
             <motion.div
               key={step.title}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15"
               initial={{ opacity: 0, y: 50 }}
               animate={isVisible.process ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}

@@ -34,7 +34,7 @@ export default function ProblemSection({ isVisible }) {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible.problems ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-[#155e63] mb-6">
             Why Most AI Initiatives Stall
@@ -48,10 +48,11 @@ export default function ProblemSection({ isVisible }) {
           {problems.map((problem, index) => (
             <motion.div
               key={problem.title}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl border border-gray-100"
               initial={{ opacity: 0, y: 50 }}
               animate={isVisible.problems ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
+              style={{ willChange: 'opacity, transform' }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-[#fe5620] to-[#fd8246] rounded-2xl flex items-center justify-center mb-6">
                 <problem.icon className="w-8 h-8 text-white" />

@@ -58,7 +58,7 @@ export default function ServicesSection({ isVisible }) {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible.services ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-[#155e63] mb-6">
             Core AI Solutions
@@ -74,9 +74,10 @@ export default function ServicesSection({ isVisible }) {
               key={service.title}
               initial={{ opacity: 0, y: 50 }}
               animate={isVisible.services ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
+              style={{ willChange: 'opacity, transform' }}
             >
-              <Card className="h-full bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl overflow-hidden group">
+              <Card className="h-full bg-white border-0 shadow-xl hover:shadow-2xl rounded-2xl overflow-hidden group">
                 <CardContent className="p-8">
                   {/* Icon and Title */}
                   <div className="mb-6">
@@ -124,7 +125,7 @@ export default function ServicesSection({ isVisible }) {
                   {/* CTA */}
                   <Button 
                     variant="outline"
-                    className="w-full border-[#155e63] text-[#155e63] hover:bg-[#155e63] hover:text-white group-hover:bg-[#155e63] group-hover:text-white transition-all duration-300"
+                    className="w-full border-[#155e63] text-[#155e63] hover:bg-[#155e63] hover:text-white group-hover:bg-[#155e63] group-hover:text-white"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
