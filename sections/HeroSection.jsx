@@ -37,16 +37,20 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-4"
+            transition={{ delay: 0.1, duration: 0.6 }}
+            className="mb-6"
           >
-            <span className="inline-block px-4 py-2 bg-[#fe5620]/20 backdrop-blur-sm rounded-full text-[#fd8246] font-medium text-sm border border-[#fe5620]/30">
-              Software as a Reef
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="Coralum Logo" 
+              className="w-60 h-30 object-cover rounded-2xl"
+            />
           </motion.div>
+          
+
 
           <motion.h1 
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            className="font-croogla text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -76,7 +80,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-[#155e63] mb-2">Supercharge Your AI Journey</h3>
+            <h3 className="font-croogla text-xl sm:text-2xl font-bold text-[#155e63] mb-2">Supercharge Your AI Journey</h3>
             <p className="text-sm sm:text-base text-gray-600">Get a personalized consultation with our founder and structure a roadmap to get the most out of your investments.</p>
             <div className="my-3">
               <a href="https://www.linkedin.com/in/eduardo-sancho-solano/" target="_blank" rel="noopener noreferrer">
