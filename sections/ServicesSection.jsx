@@ -42,7 +42,7 @@ const services = [
       "Automated summarization",
       "CRM workflow integration"
     ],
-    gradient: "from-coralum-coral to-[#fe9500]"
+    gradient: "from-coralum-coral to-coralum-coral-light"
   }
 ];
 
