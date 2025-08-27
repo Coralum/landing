@@ -27,7 +27,7 @@ export default function ProblemSection({ isVisible }) {
     <section 
       id="problems"
       data-animate
-      className="py-24 bg-gradient-to-b from-white to-[#f9f8eb]"
+      className="py-24 bg-gradient-to-b from-white to-coralum-cream"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div 
@@ -36,7 +36,7 @@ export default function ProblemSection({ isVisible }) {
           animate={isVisible.problems ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <h2 className="font-croogla text-4xl lg:text-5xl font-bold text-[#155e63] mb-6">
+          <h2 className="font-croogla text-4xl lg:text-5xl font-bold text-coralum-teal mb-6">
             Why Most AI Initiatives Stall
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -58,7 +58,7 @@ export default function ProblemSection({ isVisible }) {
                 <problem.icon className="w-8 h-8 text-white" />
               </div>
               
-              <h3 className="font-croogla text-2xl font-bold text-[#155e63] mb-4">
+              <h3 className="font-croogla text-2xl font-bold text-coralum-teal mb-4">
                 {problem.title}
               </h3>
               

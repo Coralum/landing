@@ -21,7 +21,7 @@ export default function HeroSection() {
           alt="Thriving coral reef ecosystem"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#155e63]/90 via-[#155e63]/70 to-[#155e63]/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-coralum-teal/90 via-coralum-teal/70 to-coralum-teal/40"></div>
       </div>
 
 
@@ -53,7 +53,7 @@ export default function HeroSection() {
         {/* Right Content - Contact Form */}
         <div className="bg-[#eeeeee]/95 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/20 w-full max-w-sm md:max-w-none lg:max-w-none mx-auto lg:mx-0">
           <div>
-            <h3 className="font-croogla text-xl sm:text-2xl font-bold text-[#155e63] mb-2">Supercharge Your AI Journey</h3>
+            <h3 className="font-croogla text-xl sm:text-2xl font-bold text-coralum-teal mb-2">Supercharge Your AI Journey</h3>
             <p className="text-sm sm:text-base text-gray-600">Get a personalized consultation with our founder and structure a roadmap to get the most out of your investments.</p>
             <div className="my-3">
               <a href="https://www.linkedin.com/in/eduardo-sancho-solano/" target="_blank" rel="noopener noreferrer">

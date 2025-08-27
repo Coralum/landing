@@ -30,7 +30,7 @@ const services = [
       "Contextual search & retrieval",
       "Source citation tracking"
     ],
-    gradient: "from-[#155e63] to-[#1a6b70]"
+    gradient: "from-coralum-teal to-coralum-teal2"
   },
   {
     icon: FileText,
@@ -60,7 +60,7 @@ export default function ServicesSection({ isVisible }) {
           animate={isVisible.services ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#155e63] mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-coralum-teal mb-6">
             Core AI Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -84,7 +84,7 @@ export default function ServicesSection({ isVisible }) {
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-[#155e63] mb-2">
+                    <h3 className="text-2xl font-bold text-coralum-teal mb-2">
                       {service.title}
                     </h3>
                   </div>
@@ -104,14 +104,14 @@ export default function ServicesSection({ isVisible }) {
                     <Badge className="mb-3 bg-green-100 text-green-700 border-green-200">
                       Outcome
                     </Badge>
-                    <p className="text-[#155e63] font-semibold text-lg">
+                    <p className="text-coralum-teal font-semibold text-lg">
                       {service.outcome}
                     </p>
                   </div>
 
                   {/* Features */}
                   <div className="mb-8">
-                    <h4 className="font-semibold text-[#155e63] mb-3">Key Features:</h4>
+                    <h4 className="font-semibold text-coralum-teal mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
@@ -125,7 +125,7 @@ export default function ServicesSection({ isVisible }) {
                   {/* CTA */}
                   {/* <Button 
                     variant="outline"
-                    className="w-full border-[#155e63] text-[#155e63] hover:bg-[#155e63] hover:text-white group-hover:bg-[#155e63] group-hover:text-white"
+                    className="w-full border-coralum-teal text-coralum-teal hover:bg-coralum-teal hover:text-white group-hover:bg-coralum-teal group-hover:text-white"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />

@@ -53,7 +53,7 @@ export default function TestimonialsSection({ isVisible }) {
           animate={isVisible.testimonials ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#155e63] mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-coralum-teal mb-6">
             Trusted by Founders & CTOs
           </h2>
         </motion.div>
@@ -77,13 +77,13 @@ export default function TestimonialsSection({ isVisible }) {
                 transition={{ duration: 0.5 }}
                 className="text-center"
               >
-                <blockquote className="text-2xl lg:text-3xl text-[#155e63] font-medium leading-relaxed mb-8">
+                <blockquote className="text-2xl lg:text-3xl text-coralum-teal font-medium leading-relaxed mb-8">
                   "{testimonials[currentIndex].quote}"
                 </blockquote>
 
                 <div className="flex items-center justify-center space-x-4">
                   <div className="text-left">
-                    <p className="text-xl font-bold text-[#155e63]">
+                    <p className="text-xl font-bold text-coralum-teal">
                       {testimonials[currentIndex].name}
                     </p>
                     <p className="text-gray-600">
@@ -100,7 +100,7 @@ export default function TestimonialsSection({ isVisible }) {
                 variant="outline"
                 size="icon"
                 onClick={prevTestimonial}
-                className="rounded-full border-[#155e63] text-[#155e63] hover:bg-[#155e63] hover:text-white"
+                className="rounded-full border-coralum-teal text-coralum-teal hover:bg-coralum-teal hover:text-white"
               >
                 <ChevronLeft className="w-5 h-5" />
               </Button>
@@ -124,7 +124,7 @@ export default function TestimonialsSection({ isVisible }) {
                 variant="outline"
                 size="icon"
                 onClick={nextTestimonial}
-                className="rounded-full border-[#155e63] text-[#155e63] hover:bg-[#155e63] hover:text-white"
+                className="rounded-full border-coralum-teal text-coralum-teal hover:bg-coralum-teal hover:text-white"
               >
                 <ChevronRight className="w-5 h-5" />
               </Button>

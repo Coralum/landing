@@ -10,7 +10,7 @@ export default function CtaSection({ isVisible }) {
     <section 
       id="cta"
       data-animate
-      className="py-24 bg-gradient-to-r from-[#155e63] to-[#1a6b70] relative overflow-hidden"
+      className="py-24 bg-gradient-to-r from-coralum-teal to-coralum-teal2 relative overflow-hidden"
     >
 
 

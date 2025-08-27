@@ -46,7 +46,7 @@ export default function ApproachSection({ isVisible }) {
           animate={isVisible.approach ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#155e63] mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-coralum-teal mb-6">
             Business simplicity without AI complexity
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -73,7 +73,7 @@ export default function ApproachSection({ isVisible }) {
           </div>
 
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-[#155e63] mb-4">
+            <h3 className="text-3xl font-bold text-coralum-teal mb-4">
               The BOOT Journey
             </h3>
             <p className="text-gray-600 text-lg">
@@ -85,10 +85,10 @@ export default function ApproachSection({ isVisible }) {
             {bootJourney.map((phase, index) => (
               <React.Fragment key={phase.phase}>
                 <div className="flex flex-col items-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-[#155e63] to-[#1a6b70] rounded-2xl flex items-center justify-center mb-4 shadow-lg relative">
+                  <div className="w-24 h-24 bg-gradient-to-r from-coralum-teal to-coralum-teal2 rounded-2xl flex items-center justify-center mb-4 shadow-lg relative">
                     <phase.icon className="w-12 h-12 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-[#155e63] mb-2">
+                  <h4 className="text-xl font-bold text-coralum-teal mb-2">
                     {phase.phase}
                   </h4>
                   <p className="text-sm text-gray-600 font-medium mb-2 max-w-32 text-center">

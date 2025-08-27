@@ -14,6 +14,7 @@ module.exports = {
         coralum: {
           cream: "#f9f8eb",      // Light cream background
           teal: "#155e63",       // Primary teal
+          teal2: "#1a6b70",      // Secondary teal
           dark: "#303841",       // Dark gray/charcoal
           light: "#eeeeee",      // Light gray
           muted: "#d2cccc",      // Muted gray
