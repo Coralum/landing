@@ -99,6 +99,7 @@ All UI components are built using shadcn/ui and can be customized in their respe
 
 This project can be deployed to any platform that supports Next.js:
 
+
 - **Vercel** (Recommended)
 - **Netlify**
 - **Railway**
