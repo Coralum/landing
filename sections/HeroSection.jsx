@@ -28,57 +28,30 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-4 md:gap-4 lg:gap-12 items-start sm:items-center w-full">
         {/* Left Content */}
-        <motion.div 
-          className="text-white"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-            className="mb-6"
-          >
+        <div className="text-white">
+          <div className="mb-6">
             <img 
               src="/logo.png" 
               alt="Coralum Logo" 
               className="w-60 h-30 object-cover rounded-2xl"
             />
-          </motion.div>
+          </div>
           
-
-
-          <motion.h1 
-            className="font-croogla text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            We Craft Adaptive
+          <h1 className="font-croogla text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Craft Adaptive
             <span className="block text-[#fd8246]">AI Workflows</span>
             <span className="block text-xl sm:text-2xl lg:text-3xl font-normal opacity-90">
               Tailored To Your SaaS
             </span>
-          </motion.h1>
+          </h1>
 
-          <motion.p 
-            className="hidden md:block text-lg sm:text-xl lg:text-2xl mb-6 opacity-90 leading-relaxed max-w-2xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-          >
-            Turn fragmented tools into thriving ecosystems. We build, optimize, and transfer AI-powered solutions that grow stronger together.
-          </motion.p>
-        </motion.div>
+          <p className="hidden md:block text-lg sm:text-xl lg:text-2xl mb-6 opacity-90 leading-relaxed max-w-2xl">
+          We transform scattered tools into connected AI ecosystems that unlock growth and efficiency.
+          </p>
+        </div>
 
         {/* Right Content - Contact Form */}
-        <motion.div 
-          className="bg-white/95 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/20 w-full max-w-sm md:max-w-none lg:max-w-none mx-auto lg:mx-0"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
+        <div className="bg-[#eeeeee]/95 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/20 w-full max-w-sm md:max-w-none lg:max-w-none mx-auto lg:mx-0">
           <div>
             <h3 className="font-croogla text-xl sm:text-2xl font-bold text-[#155e63] mb-2">Supercharge Your AI Journey</h3>
             <p className="text-sm sm:text-base text-gray-600">Get a personalized consultation with our founder and structure a roadmap to get the most out of your investments.</p>
@@ -87,7 +60,12 @@ export default function HeroSection() {
                 <small className="text-sm text-gray-500 underline">Meet our founder</small>
               </a>
             </div>
-            <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg mb-4">
+            <motion.div 
+              className="w-full aspect-video rounded-lg overflow-hidden shadow-lg mb-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
                <iframe 
                  className="w-full h-full"
                  src="https://www.youtube.com/embed/tPBNNkIsApE?si=lBlMoJv7wWwUnnTq" 
@@ -97,7 +75,7 @@ export default function HeroSection() {
                  referrerPolicy="strict-origin-when-cross-origin" 
                  allowFullScreen
                />
-             </div>
+             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -105,18 +83,17 @@ export default function HeroSection() {
             >
               <Button 
                 size="lg"
-                className="bg-[#fe5620] hover:bg-[#e5491c] text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto"
+                className="bg-[#fe5620] hover:bg-[#e5491c] text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto transition-all duration-300 ease-out"
                 onClick={() => {
                   window.open('https://calendar.app.google/PzAQecVTNGDXEorz5', '_blank');
                 }}
               >
-                <Calendar className="w-5 h-5 mr-3" />
                 <span className="inline">Book a call</span>
-                <ArrowRight className="w-5 h-5 ml-3" />
+                <Calendar className="w-5 h-5 ml-3" />
               </Button>
             </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
