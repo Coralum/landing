@@ -66,7 +66,7 @@ export default function TestimonialsSection({ isVisible }) {
         >
           <div className="bg-white rounded-3xl shadow-2xl p-12 relative overflow-hidden">
             {/* Background Quote Icon */}
-            <Quote className="absolute top-8 right-8 w-16 h-16 text-[#fe5620]/10" />
+            <Quote className="absolute top-8 right-8 w-16 h-16 text-coralum-orange/10" />
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -112,7 +112,7 @@ export default function TestimonialsSection({ isVisible }) {
                     key={index}
                     className={`w-3 h-3 rounded-full ${
                       index === currentIndex 
-                        ? 'bg-[#fe5620] scale-125' 
+                        ? 'bg-coralum-orange scale-125' 
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                     onClick={() => setCurrentIndex(index)}

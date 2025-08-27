@@ -18,7 +18,7 @@ const services = [
       "CRM integration & handoffs",
       "Automated FAQ handling"
     ],
-    gradient: "from-[#fe5620] to-[#fd8246]"
+    gradient: "from-coralum-orange to-[#fd8246]"
   },
   {
     icon: Search,

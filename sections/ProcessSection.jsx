@@ -70,7 +70,7 @@ export default function ProcessSection({ isVisible }) {
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
               <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-[#fe5620] to-[#fd8246] rounded-2xl flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-coralum-orange to-[#fd8246] rounded-2xl flex items-center justify-center mb-4">
                   <step.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="flex items-center mb-4">

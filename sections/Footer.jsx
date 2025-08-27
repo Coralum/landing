@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-[#fe5620] to-[#fd8246] rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-coralum-orange to-[#fd8246] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">C</span>
               </div>
               <div>
@@ -60,7 +60,7 @@ export default function Footer() {
               href="https://calendar.app.google/PzAQecVTNGDXEorz5"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-[#fd8246] hover:text-[#fe5620] font-semibold transition-colors duration-300"
+              className="inline-flex items-center text-[#fd8246] hover:text-coralum-orange font-semibold transition-colors duration-300"
             >
               Schedule Strategy Call
               <ExternalLink className="w-4 h-4 ml-2" />
