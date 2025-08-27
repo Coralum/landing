@@ -9,6 +9,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Viewport meta tag for mobile optimization */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        
         {/* Preload critical resources */}
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />

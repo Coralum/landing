@@ -9,9 +9,9 @@ export default function HeroSection() {
 
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden w-full py-8 sm:pt-8" id="hero">
+    <section className="relative min-h-screen flex items-center overflow-hidden w-full pt-0 pb-0" id="hero">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 -top-[env(safe-area-inset-top)] -bottom-[env(safe-area-inset-bottom)]">
         <img 
           src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2000" 
           // src="https://images.unsplash.com/photo-1582623838120-455da222cdc7?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
