@@ -42,7 +42,7 @@ export default function CtaSection({ isVisible }) {
           >
             <Button 
               size="lg"
-              className="bg-coralum-orange hover:bg-[#e5491c] text-white px-6 sm:px-8 lg:px-10 py-4 sm:py-6 text-base sm:text-lg lg:text-xl font-semibold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto"
+              className="bg-coralum-orange hover:bg-coralum-coral-dark text-white px-6 sm:px-8 lg:px-10 py-4 sm:py-6 text-base sm:text-lg lg:text-xl font-semibold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto"
               onClick={() => {
                 window.open('https://calendar.app.google/PzAQecVTNGDXEorz5', '_blank');
               }}
