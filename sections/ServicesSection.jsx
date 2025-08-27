@@ -18,7 +18,7 @@ const services = [
       "CRM integration & handoffs",
       "Automated FAQ handling"
     ],
-    gradient: "from-coralum-orange to-[#fd8246]"
+    gradient: "from-coralum-orange to-coralum-coral"
   },
   {
     icon: Search,
@@ -42,7 +42,7 @@ const services = [
       "Automated summarization",
       "CRM workflow integration"
     ],
-    gradient: "from-[#fd8246] to-[#fe9500]"
+    gradient: "from-coralum-coral to-[#fe9500]"
   }
 ];
 
@@ -115,7 +115,7 @@ export default function ServicesSection({ isVisible }) {
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
-                          <div className="w-2 h-2 bg-[#fd8246] rounded-full mr-3"></div>
+                          <div className="w-2 h-2 bg-coralum-coral rounded-full mr-3"></div>
                           {feature}
                         </li>
                       ))}

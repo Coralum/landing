@@ -22,7 +22,7 @@ export default function CtaSection({ isVisible }) {
         >
           <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-8">
             Ready to Transform Your
-            <span className="block text-[#fd8246]">AI Strategy?</span>
+            <span className="block text-coralum-coral]">AI Strategy?</span>
           </h2>
           
           <div className="space-y-6 mb-12">

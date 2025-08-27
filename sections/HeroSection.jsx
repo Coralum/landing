@@ -39,7 +39,7 @@ export default function HeroSection() {
           
           <h1 className="font-croogla text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Craft Adaptive
-            <span className="block text-[#fd8246]">AI Workflows</span>
+            <span className="block text-coralum-coral">AI Workflows</span>
             <span className="block text-xl sm:text-2xl lg:text-3xl font-normal opacity-90">
               Tailored To Your SaaS
             </span>

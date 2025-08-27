@@ -70,11 +70,11 @@ export default function ProcessSection({ isVisible }) {
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
               <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-coralum-orange to-[#fd8246] rounded-2xl flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-coralum-orange to-coralum-coral rounded-2xl flex items-center justify-center mb-4">
                   <step.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="flex items-center mb-4">
-                  <span className="w-8 h-8 bg-[#fd8246] text-white rounded-full flex items-center justify-center font-bold mr-3">
+                  <span className="w-8 h-8 bg-coralum-coral text-white rounded-full flex items-center justify-center font-bold mr-3">
                     {index + 1}
                   </span>
                   <h3 className="text-2xl font-bold text-white">
@@ -90,7 +90,7 @@ export default function ProcessSection({ isVisible }) {
               <ul className="space-y-3">
                 {step.details.map((detail, idx) => (
                   <li key={idx} className="flex items-start text-white/80">
-                    <div className="w-2 h-2 bg-[#fd8246] rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-coralum-coral rounded-full mr-3 mt-2 flex-shrink-0"></div>
                     <span>{detail}</span>
                   </li>
                 ))}

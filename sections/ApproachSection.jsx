@@ -99,7 +99,7 @@ export default function ApproachSection({ isVisible }) {
                   </p>
                 </div>
                 {index < bootJourney.length - 1 && (
-                  <ArrowRight className="w-6 h-6 text-[#fd8246] hidden lg:block self-center" />
+                  <ArrowRight className="w-6 h-6 text-coralum-coral hidden lg:block self-center" />
                 )}
               </React.Fragment>
             ))}

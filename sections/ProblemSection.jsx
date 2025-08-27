@@ -54,7 +54,7 @@ export default function ProblemSection({ isVisible }) {
               transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
               style={{ willChange: 'opacity, transform' }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-coralum-orange to-[#fd8246] rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-coralum-orange to-coralum-coral rounded-2xl flex items-center justify-center mb-6">
                 <problem.icon className="w-8 h-8 text-white" />
               </div>
               
