@@ -37,7 +37,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#f9f8eb] to-white">
+    <div className="min-h-screen bg-gradient-to-b from-coralum-cream to-white">
       <HeroSection />
       <ProblemSection isVisible={isVisible} />
       <ApproachSection isVisible={isVisible} />

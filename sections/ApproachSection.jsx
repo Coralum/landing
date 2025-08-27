@@ -36,7 +36,7 @@ export default function ApproachSection({ isVisible }) {
     <section 
       id="approach"
       data-animate
-      className="py-24 bg-gradient-to-b from-[#f9f8eb] to-white relative overflow-hidden"
+      className="py-24 bg-gradient-to-b relative"
     >
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

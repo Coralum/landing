@@ -51,7 +51,7 @@ export default function ServicesSection({ isVisible }) {
     <section 
       id="services"
       data-animate
-      className="py-24 bg-gradient-to-b from-white to-[#f9f8eb]"
+      className="py-24 bg-gradient-to-b from-white to-coralum-cream"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div 

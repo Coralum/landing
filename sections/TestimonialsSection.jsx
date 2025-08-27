@@ -44,7 +44,7 @@ export default function TestimonialsSection({ isVisible }) {
     <section 
       id="testimonials"
       data-animate
-      className="py-24 bg-gradient-to-b from-[#f9f8eb] to-white"
+      className="py-24 bg-gradient-to-b from-coralum-cream to-white"
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <motion.div 
