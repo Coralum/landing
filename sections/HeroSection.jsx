@@ -51,7 +51,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Content - Contact Form */}
-        <div className="bg-[#eeeeee]/95 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/20 w-full max-w-sm md:max-w-none lg:max-w-none mx-auto lg:mx-0">
+        <div className="bg-coralum-light/95 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/20 w-full max-w-sm md:max-w-none lg:max-w-none mx-auto lg:mx-0">
           <div>
             <h3 className="font-croogla text-xl sm:text-2xl font-bold text-coralum-teal mb-2">Supercharge Your AI Journey</h3>
             <p className="text-sm sm:text-base text-gray-600">Get a personalized consultation with our founder and structure a roadmap to get the most out of your investments.</p>
