@@ -11,7 +11,7 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden w-full pt-0 pb-0" id="hero">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0 -top-[env(safe-area-inset-top)] -bottom-[env(safe-area-inset-bottom)]">
+      <div className="absolute inset-0 z-0 left-0 right-0">
         <img 
           src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2000" 
           // src="https://images.unsplash.com/photo-1582623838120-455da222cdc7?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -22,6 +22,8 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-coralum-teal/90 via-coralum-teal/70 to-coralum-teal/40"></div>
+        {/* Top blend overlay to match #155e63 background */}
+        <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-[#303841] to-transparent"></div>
       </div>
 
 

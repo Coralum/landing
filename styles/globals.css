@@ -66,26 +66,9 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-    /* Ensure full screen coverage on mobile */
-    min-height: 100vh;
-    min-height: 100dvh; /* Dynamic viewport height for mobile */
-  }
-  
-  /* Handle safe area insets for mobile devices */
-  .safe-area-top {
-    padding-top: env(safe-area-inset-top);
-  }
-  
-  .safe-area-bottom {
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-  
-  /* Ensure sections extend to full viewport */
-  section {
-    min-height: 100vh;
-    min-height: 100dvh;
+
+  html {
+    background-color: #303841; /* for overscroll */
   }
   
   /* Progressive enhancement: Allow scroll animations to work first */
