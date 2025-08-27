@@ -9,7 +9,7 @@ export default function HeroSection() {
 
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden w-full py-10" id="hero">
+    <section className="relative min-h-screen flex w-full py-10" id="hero">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 left-0 right-0">
         <img 
@@ -27,7 +27,7 @@ export default function HeroSection() {
 
 
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 sm:gap-4 lg:gap-12 items-start sm:items-center w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 sm:gap-4 lg:gap-12 items-start sm:items-center">
         {/* Left Content */}
         <div className="text-white">
           <div className="mb-6">
@@ -52,26 +52,28 @@ export default function HeroSection() {
         </div>
 
         {/* Right Content - Contact Form */}
-        <div className="bg-coralum-light/95 backdrop-blur-sm rounded-3xl pt-4 p-6 sm:p-6 lg:p-8 shadow-2xl border border-white/20 w-full max-w-sm md:max-w-none lg:max-w-none mx-auto lg:mx-0">
+        <div className="bg-coralum-light/95 backdrop-blur-sm rounded-3xl pt-4 p-6 sm:p-6 lg:p-8 shadow-2xl border border-white/20 w-full max-w-sm md:max-w-none lg:max-w-none">
           <div>
             <h3 className="font-croogla text-xl sm:text-2xl font-bold text-coralum-teal mb-2">Supercharge Your AI Journey</h3>
             <p className="text-sm sm:text-base text-gray-600 mb-3">Get a personalized consultation with our founder and structure a roadmap to get the most out of your investments.</p>
-            <motion.div 
-              className="w-full aspect-video rounded-lg overflow-hidden shadow-lg mb-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-               <iframe 
-                 className="w-full h-full"
-                 src="https://www.youtube.com/embed/tPBNNkIsApE?si=lBlMoJv7wWwUnnTq" 
-                 title="YouTube video player" 
-                 frameBorder="0" 
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                 referrerPolicy="strict-origin-when-cross-origin" 
-                 allowFullScreen
-               />
-             </motion.div>
+            <div className="w-full aspect-video rounded-2xl bg-black/20 backdrop-blur-sm shadow-2xl mb-4">
+              <motion.div 
+                className="w-full h-full rounded-xl overflow-hidden shadow-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/tPBNNkIsApE?si=lBlMoJv7wWwUnnTq" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                />
+               </motion.div>
+             </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
