@@ -1,12 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function HeroSection() {
-
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
     <section className="relative min-h-screen flex w-full py-10" id="hero">
@@ -20,6 +20,8 @@ export default function HeroSection() {
           // src="https://plus.unsplash.com/premium_photo-1661841439995-1706237c83dc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Thriving coral reef ecosystem"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-coralum-teal/90 via-coralum-teal/70 to-coralum-teal/40"></div>
         <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-coralum-dark to-transparent"></div>
@@ -35,6 +37,8 @@ export default function HeroSection() {
               src="/coralum.png" 
               alt="Coralum Logo" 
               className="w-64 md:w-80 rounded-2xl"
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
           
@@ -56,22 +60,45 @@ export default function HeroSection() {
           <div>
             <h3 className="font-croogla text-xl sm:text-2xl font-bold text-coralum-teal mb-2">Supercharge Your AI Journey</h3>
             <p className="text-sm sm:text-base text-gray-600 mb-3">Get a personalized consultation with our founder and structure a roadmap to get the most out of your investments.</p>
-            <div className="w-full aspect-video rounded-2xl bg-black/20 backdrop-blur-sm shadow-2xl mb-4">
+            <div className="w-full aspect-video rounded-xl bg-black backdrop-blur-sm shadow-2xl mb-4">
               <motion.div 
-                className="w-full h-full rounded-xl overflow-hidden shadow-lg"
+                className="w-full h-full rounded-xl overflow-hidden shadow-lg relative"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <iframe 
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/tPBNNkIsApE?si=lBlMoJv7wWwUnnTq" 
-                  title="YouTube video player" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerPolicy="strict-origin-when-cross-origin" 
-                  allowFullScreen
-                />
+                {!videoLoaded ? (
+                  <>
+                    {/* Cached YouTube thumbnail */}
+                    <img 
+                      src="https://img.youtube.com/vi/tPBNNkIsApE/maxresdefault.jpg"
+                      alt="Video thumbnail"
+                      className="w-full h-full object-cover"
+                      loading="eager"
+                    />
+                    {/* Play button overlay */}
+                    <div 
+                      className="absolute inset-0 bg-black/20 flex items-center justify-center cursor-pointer hover:bg-black/30 transition-all duration-300"
+                      onClick={() => setVideoLoaded(true)}
+                    >
+                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg hover:bg-red-700 transition-all duration-300 hover:scale-110">
+                        <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <iframe 
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/tPBNNkIsApE?si=lBlMoJv7wWwUnnTq&autoplay=1" 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen
+                  />
+                )}
                </motion.div>
              </div>
             <motion.div
