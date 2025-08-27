@@ -83,7 +83,7 @@ export default function HeroSection() {
             >
               <Button 
                 size="lg"
-                className="bg-[#fe5620] hover:bg-[#e5491c] text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto transition-all duration-300 ease-out"
+                className="bg-[#fe5620] hover:bg-[#e5491c] text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full transition-all duration-300 ease-out"
                 onClick={() => {
                   window.open('https://calendar.app.google/PzAQecVTNGDXEorz5', '_blank');
                 }}

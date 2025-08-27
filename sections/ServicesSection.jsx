@@ -123,13 +123,13 @@ export default function ServicesSection({ isVisible }) {
                   </div>
 
                   {/* CTA */}
-                  <Button 
+                  {/* <Button 
                     variant="outline"
                     className="w-full border-[#155e63] text-[#155e63] hover:bg-[#155e63] hover:text-white group-hover:bg-[#155e63] group-hover:text-white"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
             </motion.div>

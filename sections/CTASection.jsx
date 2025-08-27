@@ -47,9 +47,8 @@ export default function CtaSection({ isVisible }) {
                 window.open('https://calendar.app.google/PzAQecVTNGDXEorz5', '_blank');
               }}
             >
-              <Calendar className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
               <span className="inline">Book a call</span>
-              <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3" />
+              <Calendar className="w-5 h-5 ml-3" />
             </Button>
           </motion.div>
         </motion.div>
