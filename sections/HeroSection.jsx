@@ -9,22 +9,17 @@ export default function HeroSection() {
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
-    <section className="relative min-h-screen flex w-full py-10" id="hero">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex w-full pt-10 pb-16 sm:py-10" id="hero">
       <div className="absolute inset-0 z-0 left-0 right-0">
-        <img 
-          src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2000" 
-          // src="https://images.unsplash.com/photo-1582623838120-455da222cdc7?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          // src="https://plus.unsplash.com/premium_photo-1661812071978-771a70ca1516?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          // src="https://images.unsplash.com/photo-1682687981907-170c006e3744?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          // src="https://plus.unsplash.com/premium_photo-1661841439995-1706237c83dc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        <img
+          src="/reef.jpeg" 
           alt="Thriving coral reef ecosystem"
           className="w-full h-full object-cover"
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-coralum-teal/90 via-coralum-teal/70 to-coralum-teal/40"></div>
-        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-coralum-dark to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-coralum-teal/90 to-coralum-teal/40 sm:to-coralum-teal/0"></div>
+        <div className="lg:hidden absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-coralum-dark to-transparent"></div>
       </div>
 
 
@@ -56,7 +51,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Content - Contact Form */}
-        <div className="bg-coralum-light/95 backdrop-blur-sm rounded-3xl pt-4 p-6 sm:p-6 lg:p-8 shadow-2xl border border-white/20 w-full max-w-sm md:max-w-none lg:max-w-none">
+        <div className="bg-coralum-light/95 backdrop-blur-sm rounded-3xl pt-4 p-6 lg:p-8 shadow-2xl border border-white/20 w-full max-w-sm md:max-w-none lg:max-w-none">
           <div>
             <h3 className="font-croogla text-xl sm:text-2xl font-bold text-coralum-teal mb-2">Supercharge Your AI Journey</h3>
             <p className="text-sm sm:text-base text-gray-600 mb-3">Get a personalized consultation with our founder and structure a roadmap to get the most out of your investments.</p>
